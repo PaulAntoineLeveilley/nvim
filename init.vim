@@ -17,6 +17,8 @@ Plug 'hrsh7th/cmp-cmdline'           " Source pour la ligne de commande
 Plug 'L3MON4D3/LuaSnip'              " Snippets engine
 Plug 'saadparwaiz1/cmp_luasnip'      " Source snippets pour nvim-cmp
 
+Plug 'ray-x/lsp_signature.nvim'      " signature help
+
 call plug#end()
 
 let g:vscode_style = "light"
@@ -53,14 +55,25 @@ cmp.setup({
   })
 })
 
+
+-- Configuration de lsp_signature pour afficher la signature des fonctions
+require('lsp_signature').setup({
+  bind = true,
+  floating_window = true,
+  hint_enable = false,
+  handler_opts = {
+    border = "rounded"
+  }
+})
+
+
 -- LSP setup pour pyright, avec capabilities pour nvim-cmp
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-
-
 require("mason").setup()
 require("lspconfig").pyright.setup {
-  settings = {
+capabilities = capabilities,
+	settings = {
     python = {
       analysis = {
         typeCheckingMode = "off",
