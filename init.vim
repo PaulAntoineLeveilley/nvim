@@ -19,8 +19,6 @@ colorscheme vscode
 
 lua << EOF
 require("mason").setup()
-require("mason-lspconfig").setup()
-
 require("lspconfig").pyright.setup {
   settings = {
     python = {
