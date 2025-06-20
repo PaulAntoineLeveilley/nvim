@@ -9,7 +9,7 @@ opt.number = true
 opt.tabstop = 2 --spaces for tab
 opt.shiftwidth = 2 --2 spaces for indent width
 opt.expandtab = true --expand tab to spaces
-opt.autoindent  = true --copy indent from curent line when starting new one
+opt.autoindent = true --copy indent from curent line when starting new one
 
 opt.wrap = false
 
@@ -21,7 +21,7 @@ opt.cursorline = true
 
 --colors
 opt.termguicolors = true
-opt.background = "dark"
+opt.background = "light"
 opt.signcolumn = "yes"
 
 --backspace
@@ -32,6 +32,4 @@ opt.clipboard:append("unnamedplus")
 
 --split windows
 opt.splitright = true --split vertical window to the right
-opt.splitbelow  = true --split horizontal window to the bottom
-
-
+opt.splitbelow = true --split horizontal window to the bottom
