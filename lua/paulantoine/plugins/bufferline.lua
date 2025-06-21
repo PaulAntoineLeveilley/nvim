@@ -7,4 +7,11 @@ return {
       mode = "tabs",
     },
   },
+  config = function()
+    require("bufferline").setup({
+      options = {
+        separator_style = "slant", -- tu peux changer ici
+      },
+    })
+  end,
 }
