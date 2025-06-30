@@ -19,5 +19,5 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- remap vim keys
-vim.keymap.set({ "n", "v" }, "é", "$", { noremap = true })
-vim.keymap.set({ "n", "v" }, "ç", "^", { noremap = true })
+vim.keymap.set({ "n", "v", "o" }, "é", "$", { noremap = true })
+vim.keymap.set({ "n", "v", "o" }, "ç", "^", { noremap = true })
