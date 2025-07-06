@@ -8,7 +8,7 @@ return {
     event = "BufReadPost",
     config = function()
       -- Options de repliement
-      vim.o.foldcolumn = "1"
+      vim.o.foldcolumn = "auto:9"
       vim.o.foldlevel = 99
       vim.o.foldlevelstart = 99
       vim.o.foldenable = true
