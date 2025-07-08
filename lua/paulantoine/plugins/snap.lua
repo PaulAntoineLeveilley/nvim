@@ -9,5 +9,8 @@ return {
     save_path = "~/Pictures",
     has_breadcrumbs = true,
     bg_theme = "bamboo",
+    watermart = "",
+    bg_x_padding = 0,
+    bg_y_padding = 0,
   },
 }
