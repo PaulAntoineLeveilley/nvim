@@ -53,6 +53,8 @@ return {
     lualine.setup({
       options = {
         theme = my_lualine_theme,
+        section_separators = { left = "", right = "" }, -- arrondi
+        component_separators = { left = "", right = "" },
       },
       sections = {
         lualine_x = {
