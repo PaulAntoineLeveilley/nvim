@@ -21,3 +21,5 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- remap vim keys
 vim.keymap.set({ "n", "v", "o" }, "é", "$", { noremap = true })
 vim.keymap.set({ "n", "v", "o" }, "ç", "^", { noremap = true })
+-- remap complicated command to exit insert mode in vim terminal with escape
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
