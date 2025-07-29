@@ -128,6 +128,13 @@ return {
           },
         })
       end,
+      ["tsserver"] = function()
+        lspconfig.tsserver.setup({
+          capabilities = capabilities,
+          filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+          root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
+        })
+      end,
     })
   end,
 }
