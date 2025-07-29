@@ -33,3 +33,11 @@ opt.clipboard:append("unnamedplus")
 --split windows
 opt.splitright = true --split vertical window to the right
 opt.splitbelow = true --split horizontal window to the bottom
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "markdown", "text", "python" },
+  callback = function()
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "en_us"
+  end,
+})
