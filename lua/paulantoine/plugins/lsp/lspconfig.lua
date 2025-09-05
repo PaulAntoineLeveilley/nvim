@@ -135,6 +135,11 @@ return {
           root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
         })
       end,
+      ["ruff"] = function()
+        lspconfig["ruff"].setup({
+          filetypes = { "python" },
+        })
+      end,
     })
   end,
 }
