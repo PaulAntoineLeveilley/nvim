@@ -2,7 +2,19 @@ return {
   "folke/noice.nvim",
   event = "VeryLazy",
   opts = {
-    -- add any options here
+    cmdline = {
+      enabled = true,
+    },
+    messages = {
+      enabled = true,
+      view = "mini",
+      view_error = "mini",
+      view_warn = "mini",
+      view_search = false,
+    },
+    notify = {
+      enabled = false,
+    }, -- add any options here
   },
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
