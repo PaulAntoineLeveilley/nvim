@@ -19,6 +19,9 @@ return {
         graphql = { "prettier" },
         liquid = { "prettier" },
         lua = { "stylua" },
+        cpp = { "clang-format" },
+        c = { "clang-format" },
+        cmake = { "cmake-format" },
         python = { "isort", "black" },
       },
       format_on_save = {
