@@ -22,7 +22,7 @@ return {
         cpp = { "clang-format" },
         c = { "clang-format" },
         cmake = { "cmake-format" },
-        python = { "isort", "black" },
+        python = { "ruff", "ruff_format" },
       },
       format_on_save = {
         lsp_fallback = true,
