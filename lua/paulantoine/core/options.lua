@@ -41,3 +41,9 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.opt_local.spelllang = "en_us"
   end,
 })
+
+-- Formatter SQL sur une sélection ou plage de lignes
+vim.api.nvim_create_user_command("FormatSQL", function(opts)
+  local range = string.format("%d,%d", opts.line1, opts.line2)
+  vim.cmd(range .. "!sql-formatter --language postgresql")
+end, { range = true })
