@@ -23,6 +23,8 @@ return {
         c = { "clang-format" },
         cmake = { "cmake-format" },
         python = { "ruff", "ruff_format" },
+        tex = { "tex-fmt" },
+        plaintex = { "tex-fmt" },
       },
       format_on_save = {
         lsp_fallback = true,

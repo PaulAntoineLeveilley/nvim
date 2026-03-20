@@ -1,6 +1,12 @@
 require("paulantoine.core")
 require("paulantoine.lazy")
 
+vim.filetype.add({
+  pattern = {
+    [".*%.tex%.j2"] = "tex",
+  },
+})
+
 vim.opt.fillchars = {
   foldopen = "", -- flèche vers le bas : bloc déplié
   foldclose = "", -- flèche vers la droite : bloc plié
