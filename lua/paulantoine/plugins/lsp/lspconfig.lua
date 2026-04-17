@@ -9,6 +9,7 @@ return {
   config = function()
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
+    local python_tools = require("paulantoine.core.python_tools")
 
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")
@@ -137,7 +138,10 @@ return {
       end,
       ["ruff"] = function()
         lspconfig["ruff"].setup({
+          capabilities = capabilities,
+          cmd = python_tools.get_ruff_lsp_cmd(),
           filetypes = { "python" },
+          root_dir = lspconfig.util.root_pattern("pyproject.toml", "ruff.toml", ".ruff.toml", ".git"),
         })
       end,
     })
