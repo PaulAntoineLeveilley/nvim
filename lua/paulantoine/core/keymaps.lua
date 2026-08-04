@@ -22,6 +22,11 @@ keymap.set("n", "<leader>cp", function()
   vim.fn.setreg("+", vim.fn.expand("%"))
 end)
 
+keymap.set("n", "<leader>cl", function()
+  local location = string.format("%s:%d", vim.fn.expand("%"), vim.fn.line("."))
+  vim.fn.setreg("+", location)
+end, { desc = "Copy file path with line number" })
+
 keymap.set("v", "<leader>fm", ":FormatSQL<CR>", { noremap = true, silent = true, desc = "Format sql" })
 -- remap vim keys
 vim.keymap.set({ "n", "v", "o" }, "é", "$", { noremap = true })
